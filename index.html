@@ -59,6 +59,8 @@
                     <button type="button" class="btn btn-secondary btn-lg"
                         onclick="foreach()">若出现了bug点击此按钮后刷新界面</button>
                     <br /><br />
+                                        <button id="mButton" class="btn btn-primary btn-lg mb-3">开启BGM</button>
+                    <br>
                 </div>
 
                 <div id="btn_group2" style="display: block;">
@@ -136,6 +138,27 @@
             </div>
         </div>
     </div>
+    <div style="display:none">
+
+
+
+ <audio id="audio" controls=""></audio>
+<script>
+  const mBody = document.getElementById('body')
+  const mAudio = document.getElementById('audio')
+  // 创建一个按钮
+
+ 
+  mButton.onclick = () => {
+    mAudio.src = 'http://music.163.com/song/media/outer/url?id=496370620.mp3'
+    mAudio.play()
+  }
+  mBody.append(mButton)
+ 
+</script>
+
+
+</div>
 </body>
 
 </html>
